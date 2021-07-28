@@ -13,5 +13,11 @@ class Diligencia(models.Model):
     endereco = models.ForeignKey(Endereco, blank=True, null=False, on_delete=models.CASCADE)
     pessoa = models.ManyToManyField(Pessoa, blank=True)
 
+    class Meta:
+        verbose_name = "Diligência"
+        verbose_name_plural = 'Diligências'
+
     def __str__(self):
         return self.nome
+
+
